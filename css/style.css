@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'retropulse';
+    src: url('fonts/retropulse-webfont.woff2') format('woff2'),
+         url('fonts/retropulse-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+}
+
+img {
+    width: 100%
+}
+
+@font-face {
+    font-family: Retropulse;
+    src: url(fonts\Retropulse.ttf);
+}
+
+body {
+    font-family: 'retropulse', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+/* Animations */
+
+@keyframes text_scrolling {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+}
+
+/* Scrolling Text */
+
+.scrolling--container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 6rem;
+    background-color: salmon;
+}
+
+.scrolling__bar {
+    width: 97%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    background-color: salmon;
+}
+
+.scrolling__text {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #ebd8e1;
+    animation: text_scrolling 15s linear infinite;
+}
+
+.scrolling__text:hover {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #ebd8e1;
+    cursor: pointer;
+}
+
+.text {
+    margin: 0 10px;
+}
