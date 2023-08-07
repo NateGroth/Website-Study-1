@@ -16,7 +16,7 @@ html {
 }
 
 img {
-    width: 100%
+    width: 100%;
 }
 
 @font-face {
@@ -76,3 +76,57 @@ body {
 .text {
     margin: 0 10px;
 }
+
+/* Grid */
+
+.grid-container {
+    display: grid;
+
+}
+
+.tiled--grid {
+    gap: 0 0;
+}
+
+.grid--link {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.grid__item {
+    cursor: pointer;
+    overflow: hidden;
+    min-width: 200px;
+    position: relative;
+}
+
+.grid__content {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.125s ease;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.grid--link .grid__item img {
+    transition: filter 0.125s ease;
+}
+
+.grid--link .grid__item:hover img {
+    filter: brightness(70%);
+    transition: filter 0.125s ease;
+}
+
+.grid--link .grid__item:hover .grid__content {
+    opacity: 1;
+    transition: opacity 0.125s ease;
+}
+
+
